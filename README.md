@@ -4,6 +4,8 @@
 
 > ✨该文档最早公开于 [ma5hr00m/HelloWeb](https://github.com/ma5hr00m/HelloWeb)，计划用于 Vidar-Team2024 届招新。
 
+![与主题毫无关系的 Banner 图](assets/banner.jpg)
+
 ## 0x00 前言
 
 Web 安全与 Web 开发往往是绑定在一起的，所以本文档会同时介绍 **安全&开发**，还会有一些零零散散的其他想要告诉新生的东西，所以内容会略多，希望多点耐心看完。
@@ -219,7 +221,7 @@ TS 对 JS 添加的最主要部分，就是一个独立的类型系统。JS 本�
 
 > 🧐这块的描述确实不太准确，其他 JS 框架比如 Angular 的使用者也不在少数，上文中提到的 React 严格来说只能算视图层面的库，其背后的 Next.js 才是官方主推的应用框架。不过这些对初学者来说不重要，先大致有个了解，学到后面接触到这些的时候再去调整自己的技术栈。
 
-### 后端开发
+### 后端开发 - Golang
 
 与前端相比，后端就主要是在于机器交流，你要操纵用户看不到的数据。后端没法做到像前端那样敲个代码立马就能看到反馈，不过胜在学习路线清晰，整体开发流程更加统一。
 
@@ -257,6 +259,38 @@ Gorm 是一个基于 Golang 开发的全功能 ORM 框架。那什么是 ORM 呢
 此外，在你能够使用这三件套，以及其他库熟练地完成 CRUD 开发工作之后，我推荐你去读读这些框架的源码，从底层理解这些框架是如何实现数据处理以及其他功能的实现的，比如路由匹配的方式等等，然后尝试上手写写，自己实现。这个过程也是比较有趣的，你可以使用自己学习过的 Golang 语法与原生库结合，一步步地搭建出一个具备完备功能的 Framewok。如果你之前没有什么阅读源码的经验，也不知道何从下手，可以跟着下面这篇教程走，或许可以对你有所启发：
 
 - [7天用Go从零实现Web框架Gee教程](https://geektutu.com/post/gee.html)
+
+### 后端开发 - Java
+
+#### 上手
+
+Java 这门编程语言你可能已经耳熟能详，毕竟这几年 Java 卖课的比较多（挠头）。它的跨平台性、面向对象的特性以及丰富的类库使其在编程语言中独树一帜。如果你对 C++ 或者 C# 有所了解，那么就会发现 Java 的语法与它们有许多相似之处。但是，Java 在设计上追求简洁和易读，因此去除了一些容易引发错误的概念，如指针和运算符重载等。如果你之前没学习过面向对象的语言，初次上手可能略有费劲。
+
+推荐下学习资源，可以试试：
+
+- [Java教程 - 廖雪峰](https://www.liaoxuefeng.com/wiki/1252599548343744)
+- 黑马程序员Java零基础视频教程：[上部](https://www.bilibili.com/video/BV17F411T7Ao/?vd_source=d77df35177e7fa05ef5f9e0b6ddf2180) & [下部](https://www.bilibili.com/video/BV1yW4y1Y7Ms/?spm_id_from=333.788.recommend_more_video.0&vd_source=d77df35177e7fa05ef5f9e0b6ddf2180)
+
+#### 框架
+
+学完语法之后，就可以学习对应的后端服务框架了。对于 Java 后端开发，比较推荐的技术栈是 `Spring Boot` + `Hibernate` + `MySQL`。 
+
+Spring Boot 是一个基于 Spring 框架的开源 Java 框架，它可以帮助你快速地创建出一个独立的、生产级别的 Spring 应用程序。学习资源推荐：
+
+- [Spring Boot 中文文档](https://springdoc.cn/spring-boot/)
+- [黑马程序员 SpringBoot2](https://www.bilibili.com/video/BV15b4y1a7yG/?vd_source=d77df35177e7fa05ef5f9e0b6ddf2180)
+
+Hibernate 对 JDBC 进行了非常轻量级的对象封装，它将 POJO 与数据库表建立映射关系，是一个全自动的 ORM 框架，它可以帮助你更方便地操作数据库，而无需编写复杂的 SQL 代码。
+
+- [Hibernate 中文文档](https://hibernate.github.net.cn/)
+
+#### 安全
+
+再调过头来提一下 Java 安全。网上资料茫茫多，自己挑比较费时间，可以直接看下面推荐的这个教程，phith0n 出品，必属精品：
+
+- [攻击Java Web应用-[Java Web安全]](https://javasec.org/)
+
+ 与此同时，phith0n 还建立了一个[“代码审计”知识星球](https://govuln.com/)，是一个专业、前沿、原创的 Web 代码安全与审计讨论社区，专注于分享原创的代码安全知识、漏洞挖掘方法，感兴趣的可以加一下。截至本文文档更新时，星球价格为 299￥ 终身制，不过确实值这个钱。
 
 ## 0x04 Network
 
