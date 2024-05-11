@@ -4,7 +4,7 @@
 
 > ✨该文档最早公开于 [ma5hr00m/HelloWeb](https://github.com/ma5hr00m/HelloWeb)，计划用于 Vidar-Team2024 届招新。
 
-![与主题毫无关系的 Banner 图](https://img.ma5hr00m.top/blog/helloweb-banner.png)
+![与主题毫无关系的 Banner 图](assets/helloweb-banner.png)
 
 ## 0x00 前言
 
@@ -57,7 +57,7 @@ Web 安全与 Web 开发往往是绑定在一起的，所以本文档会同时�
 
 当浏览器接收到用户输入的 URL 时，首先会做的就是 [DNS 查询](https://www.ruanyifeng.com/blog/2022/08/dns-query.html)，浏览器会去查找这个 URL 背后对应的资源在什么地方，也就是这个域名对应的 IP 是什么。 
 
-![DNS 查询原理图](https://img.ma5hr00m.top/blog/helloweb-dns.png)
+![DNS 查询原理图](assets/helloweb-dns.png)
 
 目前常见的 IP 地址格式一般为 [xxx.xxx.xxx.xxx]()，但人类要记住这样的 12 位纯数字比较困难。因此，开发者们决定⽤形象的域名（domain）来让⽤⼾记住资源的位置。你看，[vidar.club](https://vidar.club) 就⽐ [1.117.117.147](1.117.117.147) 这个 IP 好记太多了吧？浏览器根据域名向 DNS 服务器查询对应 IP 地址。DNS 服务器就像一本电话簿，里面详细记录了各种各样的域名与其对应的 IP 地址。在这个例子中，浏览器得到对应的 IP 地址就是 [1.117.117.147](1.117.117.147)。 
 
@@ -67,13 +67,13 @@ Web 安全与 Web 开发往往是绑定在一起的，所以本文档会同时�
 
 建⽴安全连接后，浏览器会向服务器发送 HTTP `GET` 请求，请求服务器返回我们事先放在服务器上的对应⽹⻚的内容，这个请求的内容通常是⼀个 HTML ⽂件。当服务器收到请求后，就会使⽤相关的响应头和 HTML 内容进⾏回复。
 
-![请求报文内容图](https://img.ma5hr00m.top/blog/helloweb-burpsuite.png)
+![请求报文内容图](assets/helloweb-burpsuite.png)
 
 浏览器收到来自服务器的 `200 OK` 的 HTTP 响应，并收到服务端发过来的 HTML ⽂件后，会处理 HTML 标记并且构建 DOM 树，继⽽处理⻚⾯中引⽤的 CSS ⽂件，构建 CSSOM，将 DOM 树和 CSSOM 合并为渲染树，计算渲染树中每个元素的位置和⼤⼩，并确定它们在⻚⾯上的布局，最后在屏幕上进⾏绘制，最终就形成你看到的⻚⾯啦。
 
 HTTP 请求和响应的具体内容可以使⽤浏览器（推荐使⽤ Chrome、Firefox 或 Edge）的 F12 开发者⼯具进⾏查看，或者使用上图中的 BurpSuite 或者 Yakit 等抓包工具。
 
-![Edge 开发者工具中查看 HTTP 报文图](https://img.ma5hr00m.top/blog/helloweb-edge.png)
+![Edge 开发者工具中查看 HTTP 报文图](assets/helloweb-edge.png)
 
 如果对 Web 应用中的数据传递还有疑问，可先后观看以下两个视频，可以让你快速了解互联⽹和浏览器的运作流程：
 
@@ -126,7 +126,7 @@ CTF 竞赛⽬前主体还是 [Jeopardy 解题模式](https://ctf-wiki.org/introd
 
 此外，有一个较为特殊的 Web 靶场，即由 BurpSuite 官方提供的 PortSwigger 靶场。该靶场收录了几乎所有 Web 常见漏洞，提供了原理讲解和由易到难、种类齐全的 100+ 练习题，并提供了官方题解和社区视频题解，在此过程中你还能熟悉 BurpSuite 的使用，非常推荐。
 
-![PortSwigger 截图](https://img.ma5hr00m.top/blog/helloweb-portswigger.png)
+![PortSwigger 截图](assets/helloweb-portswigger.png)
 
 该靶场侧重让学习者了解并明白如何利用漏洞，并不是传统的 CTF 模式，所以没有找到 Flag 这一说，而是根据触发特定条件判断题目是否完成。靶场全英文。链接如下：
 
@@ -164,7 +164,6 @@ Web 渗透，也被称为 Web 渗透测试或 Web 渗透攻击，是一种评估
 Web 安全领域的工具实在是有“一点点”多，CTF、漏洞挖掘、渗透各自有各自的工具，相同功能的工具还有很多变种、不同团队的实现，该文档没法一一列举。此处就只列出最常用的安全工具，二选一即可：
 
 - [BurpSuite - 成熟的⽹络安全⼯具](https://portswigger.net/burp)
-
 - [Yakit - 集成化单兵安全能⼒平台](https://yaklang.io/products/intro/) 
 
 如果你对这两个⼯具尚不了解，可以在⽹上搜索⼀些相关使⽤教程，起步阶段对这些⼯具的要求不⾼，简单的抓包改包即可。BurpSuite 的学习可以结合前面提到的 PortSwigger 靶场。
@@ -302,7 +301,7 @@ Hibernate 对 JDBC 进行了非常轻量级的对象封装，它将 POJO 与数�
 
 此外，HDU 有一个由学生自发创建的去中心化网络，名为[“DN11”](https://dn11.top/)，欢迎有一定网络基础的学生加入。
 
-![dn11 节点状态图](https://img.ma5hr00m.top/blog/helloweb-dn11.png)
+![dn11 节点状态图](assets/helloweb-dn11.png)
 
 ## 0x05 泛用技能
 
@@ -384,7 +383,7 @@ Linux 是一个操作系统。它由 *Linus* 于 1991 年构思设计而成。�
 
 加⼊ Vidar-Team 招新群，你经常能看到可爱的兔兔机器⼈在帮助维持群内秩序，或者回答⼀些简单的问题。
 
-![兔兔机器人问答截图](https://img.ma5hr00m.top/blog/helloweb-tutu.png)
+![兔兔机器人问答截图](assets/helloweb-tutu.png)
 
 兔兔迎新机器⼈还具有⼀个 `%blog` 命令，⽤于查询协会成员的博客链接。功能存在⼀个 SQLI 漏洞，通过这个漏洞可以查询出数据库中的 Flag。拿到 Flag 后可以私聊 Web 方向学长领取一杯奶茶哦~
 
